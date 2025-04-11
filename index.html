@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPW APKASINDO Kalimantan Barat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif;}
+    body {line-height: 1.6; color: #333; background: #fff;}
+    header {display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #006400; color: #fff; position: sticky; top: 0; z-index: 1000;}
+    nav a {margin: 0 1rem; color: #fff; text-decoration: none; font-weight: bold;}
+    .cta-buttons a {margin-left: 1rem; background: orange; padding: 0.5rem 1rem; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;}
+    .hero {background: url('https://images.unsplash.com/photo-1618221195710-d90a7990b9a3') center/cover no-repeat; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 2rem;}
+    .hero h1 {font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 1px 1px 4px #000;}
+    .hero a {background: orange; padding: 0.75rem 1.5rem; font-size: 1rem; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;}
+    .features {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: #f9f9f9;}
+    .feature {text-align: center; padding: 1rem; border-radius: 10px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+    .feature img {width: 60px; margin-bottom: 1rem;}
+    .news {padding: 2rem; background: #fff;}
+    .news-article {margin: 1rem 0; padding: 1rem; background: #f1f1f1; border-radius: 5px;}
+    .testimonial {padding: 2rem; background: #f1f1f1; text-align: center; font-style: italic;}
+    footer {background: #222; color: #fff; padding: 2rem; text-align: center;}
+    footer a {color: #ffa500; text-decoration: none; margin: 0 0.5rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>APKASINDO</strong></div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Tentang</a>
+      <a href="#">Program</a>
+      <a href="#keanggotaan">Keanggotaan</a>
+      <a href="#">Berita</a>
+      <a href="#">Advokasi</a>
+      <a href="#">Kontak</a>
+    </nav>
+    <div class="cta-buttons">
+      <a href="#keanggotaan">Daftar Anggota</a>
+      <a href="#">Donasi</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Bersama Petani Sawit Menuju Kemandirian dan Keadilan</h1>
+    <a href="#keanggotaan">Gabung Sekarang</a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Keanggotaan Online">
+      <h3>✅ Keanggotaan Online</h3>
+      <p>Pendaftaran anggota, notifikasi otomatis, dan dashboard pengguna.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/1072/1072539.png" alt="Informasi Advokasi">
+      <h3>📢 Informasi Advokasi</h3>
+      <p>Artikel hukum, suara petani, dan pengaduan online.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Edukasi">
+      <h3>📚 Edukasi & Program</h3>
+      <p>Materi pelatihan, e-learning, dan program pemerintah.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/3649/3649474.png" alt="Bantuan Hukum">
+      <h3>💬 Bantuan Hukum</h3>
+      <p>Konsultasi hukum daring dan hotline khusus anggota.</p>
+    </div>
+  </section>
+
+  <section class="news">
+    <h2>Berita & Program Terkini</h2>
+    <div class="news-article">
+      <h4>Program Subsidi Pupuk untuk Petani</h4>
+      <p>Pemerintah kembali menggulirkan bantuan subsidi pupuk untuk meningkatkan produktivitas kebun rakyat.</p>
+    </div>
+    <div class="news-article">
+      <h4>Pelatihan Manajemen Usaha Sawit Rakyat</h4>
+      <p>APKASINDO bersama mitra menyelenggarakan pelatihan manajemen usaha kecil menengah sawit berbasis desa.</p>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <blockquote>
+      "APKASINDO sangat membantu kami dalam mendapatkan akses bantuan dan informasi. Kini kami lebih percaya diri menghadapi tantangan."
+      <br>– Bapak Rudi, Petani Sawit di Sintang
+    </blockquote>
+  </section>
+
+  <section id="keanggotaan" style="padding: 3rem 2rem; background: #e8ffe8; text-align: center;">
+    <h2>Formulir Pendaftaran Anggota</h2>
+    <p>Silakan isi data diri Anda untuk bergabung menjadi anggota APKASINDO Kalbar:</p>
+    <form style="max-width: 600px; margin: 2rem auto; text-align: left;">
+      <label>Nama Lengkap:</label><br>
+      <input type="text" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+      <label>Email:</label><br>
+      <input type="email" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+      <label>No. WhatsApp:</label><br>
+      <input type="tel" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+      <label>Alamat:</label><br>
+      <textarea style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea><br>
+      <button type="submit" style="padding: 0.75rem 1.5rem; background: orange; border: none; color: white; font-weight: bold; border-radius: 5px;">Kirim Pendaftaran</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Kontak: dpwapkasindoprovkalbar@gmail.com | WhatsApp: 0813 4783 3030</p>
+    <p>Alamat: Jl. Dr. Soetomo No.99 Pontianak & Jl. Lintas Sintang – Melawi, Ransi Dakan</p>
+    <p>Ikuti kami:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">YouTube</a>
+    </p>
+    <p><strong>Donasi ke Rekening: 8885555001 a.n APKASINDO</strong></p>
+  </footer>
+</body>
+</html>
