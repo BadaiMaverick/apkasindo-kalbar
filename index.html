@@ -1,153 +1,220 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DPW APKASINDO Kalimantan Barat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif;}
-    body {line-height: 1.6; color: #333; background: #fff;}
-    header {display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #006400; color: #fff; position: sticky; top: 0; z-index: 1000;}
-    nav a {margin: 0 1rem; color: #fff; text-decoration: none; font-weight: bold;}
-    .cta-buttons a {margin-left: 1rem; background: orange; padding: 0.5rem 1rem; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;}
-    .hero {background: url('https://images.unsplash.com/photo-1618221195710-d90a7990b9a3') center/cover no-repeat; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 2rem;}
-    .hero h1 {font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 1px 1px 4px #000;}
-    .hero a {background: orange; padding: 0.75rem 1.5rem; font-size: 1rem; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;}
-    .features {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: #f9f9f9;}
-    .feature {text-align: center; padding: 1rem; border-radius: 10px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-    .feature img {width: 60px; margin-bottom: 1rem;}
-    .news {padding: 2rem; background: #fff;}
-    .news-article {margin: 1rem 0; padding: 1rem; background: #f1f1f1; border-radius: 5px;}
-    .testimonial {padding: 2rem; background: #f1f1f1; text-align: center; font-style: italic;}
-    section {padding: 3rem 2rem;}
-    footer {background: #222; color: #fff; padding: 2rem; text-align: center;}
-    footer a {color: #ffa500; text-decoration: none; margin: 0 0.5rem;}
-    h2 {margin-bottom: 1rem; text-align: center; color: #006400;}
-    form label {font-weight: bold;}
-    form input, form textarea, form select {width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #ccc;}
-  </style>
-</head>
-<body>
-  <header>
-    <div><strong>APKASINDO</strong></div>
-    <nav>
-      <a href="#">Beranda</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#program">Program</a>
-      <a href="#keanggotaan">Keanggotaan</a>
-      <a href="#berita">Berita</a>
-      <a href="#advokasi">Advokasi</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-    <div class="cta-buttons">
-      <a href="#keanggotaan">Daftar Anggota</a>
-      <a href="#donasi">Donasi</a>
-    </div>
-  </header>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>APKASINDO - Asosiasi Petani Kelapa Sawit Indonesia</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <style>  
+        :root {  
+            --orange: #FFA500;  
+            --dark: #2c3e50;  
+        }  
+        body {  
+            font-family: Arial, sans-serif;  
+        }  
+        header {  
+            background-color: white;  
+            padding: 20px;  
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+        }  
+        .logo {  
+            width: 100px;  
+        }  
+        nav a {  
+            margin-left: 30px;  
+            text-decoration: none;  
+            color: var(--dark);  
+            transition: color 0.3s;  
+        }  
+        nav a:hover {  
+            color: var(--orange);  
+        }  
+        .action-btn {  
+            background-color: var(--orange);  
+            color: white;  
+            padding: 10px 20px;  
+            border-radius: 5px;  
+            text-decoration: none;  
+            transition: background-color 0.3s;  
+        }  
+        .action-btn:hover {  
+            background-color: #ff851b;  
+        }  
+        .hero {  
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),   
+                        url('https://example.com/petani-sawit.jpg') no-repeat center center;  
+            background-size: cover;  
+            color: white;  
+            text-align: center;  
+            padding: 100px 20px;  
+        }  
+        .features {  
+            padding: 50px 20px;  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+            gap: 30px;  
+        }  
+        .feature-item {  
+            background: white;  
+            padding: 20px;  
+            border-radius: 10px;  
+            text-align: center;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+            transition: transform 0.3s;  
+        }  
+        .feature-item:hover {  
+            transform: translateY(-5px);  
+        }  
+        footer {  
+            background: var(--dark);  
+            color: white;  
+            padding: 30px;  
+            text-align: center;  
+        }  
+        .social-links a {  
+            color: white;  
+            margin: 0 10px;  
+            text-decoration: none;  
+        }  
+        .carousel {  
+            margin-top: 30px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Header -->  
+    <header class="container-fluid">  
+        <div class="d-flex justify-content-between align-items-center">  
+            <img src="logo-apkasindo.png" alt="Logo APKASINDO" class="logo">  
+            <nav>  
+                <a href="#home">Beranda</a>  
+                <a href="#tentang">Tentang</a>  
+                <a href="#program">Program</a>  
+                <a href="#keanggotaan">Keanggotaan</a>  
+                <a href="#berita">Berita</a>  
+                <a href="#advokasi">Advokasi</a>  
+                <a href="#kontak">Kontak</a>  
+                <a href="#daftar" class="action-btn">Daftar Anggota</a>  
+                <a href="#donasi" class="action-btn">Donasi</a>  
+            </nav>  
+        </div>  
+    </header>  
 
-  <section class="hero">
-    <h1>Bersama Petani Sawit Menuju Kemandirian dan Keadilan</h1>
-    <a href="#keanggotaan">Gabung Sekarang</a>
-  </section>
+    <!-- Hero Section -->  
+    <section class="hero">  
+        <h1 class="display-4">Bersama Petani Sawit Menuju Kemandirian dan Keadilan</h1>  
+        <a href="#gabung" class="action-btn btn-lg">Gabung Sekarang</a>  
+    </section>  
 
-  <section class="features">
-    <div class="feature">
-      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Keanggotaan Online">
-      <h3>✅ Keanggotaan Online</h3>
-      <p>Pendaftaran anggota, notifikasi otomatis, dan dashboard pengguna.</p>
-    </div>
-    <div class="feature">
-      <img src="https://cdn-icons-png.flaticon.com/512/1072/1072539.png" alt="Informasi Advokasi">
-      <h3>📢 Informasi Advokasi</h3>
-      <p>Artikel hukum, suara petani, dan pengaduan online.</p>
-    </div>
-    <div class="feature">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Edukasi">
-      <h3>📚 Edukasi & Program</h3>
-      <p>Materi pelatihan, e-learning, dan program pemerintah.</p>
-    </div>
-    <div class="feature">
-      <img src="https://cdn-icons-png.flaticon.com/512/3649/3649474.png" alt="Bantuan Hukum">
-      <h3>💬 Bantuan Hukum</h3>
-      <p>Konsultasi hukum daring dan hotline khusus anggota.</p>
-    </div>
-  </section>
+    <!-- Features -->  
+    <section class="container features">  
+        <div class="feature-item">  
+            <i class="fas fa-users fa-3x"></i>  
+            <h3>Keanggotaan Online</h3>  
+            <p>Daftar dan nikmati manfaat keanggotaan</p>  
+        </div>  
+        <div class="feature-item">  
+            <i class="fas fa-bullhorn fa-3x"></i>  
+            <h3>Informasi Advokasi</h3>  
+            <p>Update terbaru tentang advokasi petani</p>  
+        </div>  
+        <div class="feature-item">  
+            <i class="fas fa-book fa-3x"></i>  
+            <h3>Edukasi & Program</h3>  
+            <p>Pelatihan dan program pembangunan</p>  
+        </div>  
+        <div class="feature-item">  
+            <i class="fas fa-headset fa-3x"></i>  
+            <h3>Bantuan Hukum</h3>  
+            <p>Layanan bantuan hukum untuk anggota</p>  
+        </div>  
+    </section>  
 
-  <section id="berita" class="news">
-    <h2>Berita & Program Terkini</h2>
-    <div class="news-article">
-      <h4>Program Subsidi Pupuk untuk Petani</h4>
-      <p>Pemerintah kembali menggulirkan bantuan subsidi pupuk untuk meningkatkan produktivitas kebun rakyat.</p>
-    </div>
-    <div class="news-article">
-      <h4>Pelatihan Manajemen Usaha Sawit Rakyat</h4>
-      <p>APKASINDO bersama mitra menyelenggarakan pelatihan manajemen usaha kecil menengah sawit berbasis desa.</p>
-    </div>
-  </section>
+    <!-- Berita Terkini -->  
+    <section class="container">  
+        <h2 class="text-center">Berita & Program Terkini</h2>  
+        <div class="row">  
+            <div class="col-md-4">  
+                <div class="card mb-4 shadow-sm">  
+                    <img src="https://example.com/article1.jpg" class="card-img-top" alt="Berita 1">  
+                    <div class="card-body">  
+                        <h5 class="card-title">Judul Berita 1</h5>  
+                        <p class="card-text">Deskripsi singkat tentang berita 1.</p>  
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="col-md-4">  
+                <div class="card mb-4 shadow-sm">  
+                    <img src="https://example.com/article2.jpg" class="card-img-top" alt="Berita 2">  
+                    <div class="card-body">  
+                        <h5 class="card-title">Judul Berita 2</h5>  
+                        <p class="card-text">Deskripsi singkat tentang berita 2.</p>  
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="col-md-4">  
+                <div class="card mb-4 shadow-sm">  
+                    <img src="https://example.com/article3.jpg" class="card-img-top" alt="Berita 3">  
+                    <div class="card-body">  
+                        <h5 class="card-title">Judul Berita 3</h5>  
+                        <p class="card-text">Deskripsi singkat tentang berita 3.</p>  
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
 
-  <section class="testimonial">
-    <blockquote>
-      "APKASINDO sangat membantu kami dalam mendapatkan akses bantuan dan informasi. Kini kami lebih percaya diri menghadapi tantangan."
-      <br>– Bapak Rudi, Petani Sawit di Sintang
-    </blockquote>
-  </section>
+    <!-- Testimoni Anggota -->  
+    <section class="container carousel">  
+        <h2 class="text-center">Testimoni Anggota</h2>  
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">  
+            <div class="carousel-inner">  
+                <div class="carousel-item active text-center">  
+                    <p>"APKASINDO sangat membantuku dalam mendapatkan bantuan hukum!"</p>  
+                    <footer>- Petani Kelapa Sawit</footer>  
+                </div>  
+                <div class="carousel-item text-center">  
+                    <p>"Keanggotaan di APKASINDO membuka banyak peluang untukku."</p>  
+                    <footer>- Petani Kelapa Sawit</footer>  
+                </div>  
+                <div class="carousel-item text-center">  
+                    <p>"Informasi advokasi yang saya terima sangat bermanfaat."</p>  
+                    <footer>- Petani Kelapa Sawit</footer>  
+                </div>  
+            </div>  
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">  
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>  
+                <span class="sr-only">Previous</span>  
+            </a>  
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">  
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>  
+                <span class="sr-only">Next</span>  
+            </a>  
+        </div>  
+    </section>  
 
-  <section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>DPW APKASINDO Kalimantan Barat merupakan wadah perjuangan dan pembinaan petani kelapa sawit di Kalbar dalam upaya mencapai kemandirian, keadilan, dan keberlanjutan perkebunan rakyat.</p>
-  </section>
+    <!-- Footer -->  
+    <footer>  
+        <p>Contact us: info@apkasindo.org</p>  
+        <p>WhatsApp: +62 812-3456-7890</p>  
+        <p>Alamat: Jl. Petani Sawit No. 123, Jakarta</p>  
+        <div class="social-links">  
+            <a href="#"><i class="fab fa-facebook"></i></a>  
+            <a href="#"><i class="fab fa-instagram"></i></a>  
+            <a href="#"><i class="fab fa-twitter"></i></a>  
+        </div>  
+        <p>Nomor Rekening Donasi: 8885555001 a.n APKASINDO</p>  
+        <p>&copy; 2025 APKASINDO. All rights reserved.</p>  
+    </footer>  
 
-  <section id="keanggotaan" style="background: #e8ffe8;">
-    <h2>Formulir Pendaftaran Anggota</h2>
-    <form action="https://formsubmit.co/dpwapkasindoprovkalbar@gmail.com" method="POST">
-      <label>Nama Lengkap:</label>
-      <input type="text" name="Nama Lengkap" required>
-      <label>Email:</label>
-      <input type="email" name="Email" required>
-      <label>No. WhatsApp:</label>
-      <input type="tel" name="WhatsApp" required>
-      <label>Alamat:</label>
-      <textarea name="Alamat" required></textarea>
-      <label><input type="checkbox" name="Donasi"> Saya ingin berdonasi</label>
-      <button type="submit" style="background: orange; color: white; font-weight: bold; padding: 0.75rem 1.5rem; border: none; border-radius: 5px;">Kirim Pendaftaran</button>
-    </form>
-  </section>
-
-  <section id="advokasi">
-    <h2>Advokasi & Bantuan Hukum</h2>
-    <p>Tim advokasi kami telah mendampingi petani dalam berbagai kasus agraria dan konflik lahan.</p>
-    <a href="#">📄 Unduh: Hak-Hak Petani (PDF)</a><br>
-    <a href="#">📄 Unduh: Panduan Konflik Lahan (PDF)</a>
-    <form style="margin-top: 2rem;">
-      <h3>Ajukan Permohonan Bantuan</h3>
-      <label>Nama:</label>
-      <input type="text">
-      <label>Keterangan Kasus:</label>
-      <textarea></textarea>
-      <button type="submit">Kirim Permohonan</button>
-    </form>
-  </section>
-
-  <section id="program">
-    <h2>Program Pemerintah</h2>
-    <p>Update informasi bantuan pupuk, bibit, subsidi, dan kerja sama dengan dinas-dinas terkait.</p>
-    <ul>
-      <li>📌 Bantuan Pupuk Bersubsidi</li>
-      <li>📌 Verifikasi NIK/NIB</li>
-      <li>📌 Kerja Sama Kelembagaan</li>
-    </ul>
-  </section>
-
-  <footer id="kontak">
-    <p>Kontak: <a href="mailto:dpwapkasindoprovkalbar@gmail.com">dpwapkasindoprovkalbar@gmail.com</a> | WhatsApp: <a href="https://wa.me/6281347833030" target="_blank">0813 4783 3030</a></p>
-    <p>Alamat: Jl. Dr. Soetomo No.99 Pontianak & Jl. Lintas Sintang – Melawi, Ransi Dakan</p>
-    <p>Ikuti kami:
-      <a href="https://facebook.com/apkasindokalbar" target="_blank">Facebook</a> |
-      <a href="https://instagram.com/apkasindokalbar" target="_blank">Instagram</a> |
-      <a href="https://youtube.com/@apkasindokalbar" target="_blank">YouTube</a>
-    </p>
-    <p id="donasi"><strong>Donasi ke Rekening: 8885555001 a.n APKASINDO</strong></p>
-  </footer>
-</body>
-</html>
+    <!-- JavaScript Libraries -->  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+</body>  
+</html>  
